@@ -1,0 +1,31 @@
+
+
+.env
+/nodu_modules
+/.vscode
+
+./dist
+
+//Basics folder structure 
+
+project-root/
+├── src/                  # Main source code
+│   ├── config/           # Environment configs, constants
+│   ├── controllers/      # Route handlers or business logic
+│   ├── models/           # DB models or data schemas
+│   ├── routes/           # API route definitions
+│   ├── services/         # Reusable logic (e.g. auth, email)
+│   ├── utils/            # Helper functions
+│   ├── middlewares/      # Express or custom middleware
+│   └── index.js          # App entry point
+│
+├── tests/                # Unit and integration tests
+│   └── sample.test.js
+│
+├── public/               # Static assets (if needed)
+│
+├── .env                  # Environment variables
+├── .gitignore            # Git exclusions
+├── package.json          # Project metadata & dependencies
+├── README.md             # Project overview
+└── logs/                 # Optional: app logs or error dumps
