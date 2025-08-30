@@ -1,20 +1,22 @@
 require('dotenv').config()
-const express = require("express")
-const app = express();
+import {app} from './app.js'
+import connectDB from './db/database.js'   
 
-app.get('/' , ()=>{
-    res.send('This is considered as home page')
+
+
+connectDB()
+.then(() => {
+    app.listen(process.env.PORT || 3000 , () => {
+        console.log(`App listening on port  : ${process.env.PORT}`);
+    });
 })
-
-app.use(express.json())
-app.use(express.static('public'))
-
-
-
-
-
-
-
-app.listen(process.env.PORT || 3000 , (req,res)=>{
-     console.log("server listen on port no 3000")
+.catch((error) => {
+    console.log(`mongodb connnection fail ${error}`)
 })
+ 
+
+
+
+
+
+

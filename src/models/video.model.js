@@ -30,7 +30,7 @@ const videoSchema = new mongoose.model(
             default: true
         },
         owner: {
-            type: Schema.Types.ObjectId,
+            type: Schema.Types.ObjectId,   
             ref: "User"
         }
 
