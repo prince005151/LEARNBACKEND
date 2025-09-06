@@ -1,10 +1,12 @@
-import { asyncHandler } from "../utils/asyncHandler";
+import { asyncHandler } from "../utils/asyncHandler.js";
 import { jwt } from "jsonwebtoken";   
 import {uploadOnCloudinary} from "../utils/cloudinary";
 import {body,validationResult} from "express-validator";  
-import {ApiError} from "../utils/ApiError" 
-import {ApiResponse} from "../utils/ApiResponse"
+import {ApiError} from "../utils/ApiError.js" 
+import {ApiResponse} from "../utils/ApiResponse.js"
 import path from "path";
+import { Types } from "mongoose";
+import { pipeline } from "stream";
 
 
 const generateAccessAndRefereshTokens = async (userId) =>{
@@ -422,6 +424,8 @@ const getWatchHistory = asyncHandler(async(req, res) => {
     )
 })
 
+ 
+
 
 
 
@@ -437,6 +441,8 @@ export {
     updateUserAvatar,
     updateUserCoverImage,
     getUserChannelProfile,
-    getWatchHistory
+    getWatchHistory,
+    userChannelProfile,
+    WatchHistory
 
 }

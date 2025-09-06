@@ -17,3 +17,7 @@ const subscriptionSchema = new mongoose.Schema(
 const subscription = mongoose.model("subscription",subscriptionSchema)
 
 export{subscription}
+ 
+
+
+//databses me ye small letters aur plural form me save hoga ,jo bhi shcema export kiya hai
